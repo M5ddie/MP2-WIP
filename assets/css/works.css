@@ -1,0 +1,94 @@
+:root {
+    --Black: rgb(0,0,0);
+    --GrnBlue: rgb(1,175,183); 
+    --BluGreen: rgb(4,123,142); 
+    --DrkBlue: rgb(30,44,64); 
+    --Gray: rgb(52,66,76); 
+    --LtGray: rgb(146,169,173); 
+    --LtltGrey: rgb(220, 232, 235); 
+    --White: rgb(255,255,255);
+    --bgImage: url("../images/contact_bg.jpg");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.navbar {
+    background-color: var(--LtGray);
+}
+
+#logoBrand {
+    color: var(--BluGreen);
+    border-bottom: 3px solid var(--BluGreen);
+    font-weight: 700;
+}
+
+#logoTag {
+    color: var(--Black);
+}
+
+.reviewsDiv {
+    border: 1px solid orange;
+    height: 400px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: var(--LtGray);
+    border: none;
+    box-shadow: 10px 8px 20px var(--Gray);
+}
+
+#reviewForm {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+#clientName, #clientReview{
+    border-radius: 5px;
+    border: 1px dotted var(--LtGray);
+    background-color: var(--LtltGrey);
+}
+
+#reviewSendBtn {
+    border-radius: 5px;
+    border: 1px dotted var(--LtGray);
+    background-color: var(--DrkBlue);
+    color: var(--White);
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    
+}
+
+/* *********** */
+.rating:not(:checked) > input {
+    position:absolute;
+    display: none;
+}
+.rating:not(:checked) > label {
+    float:right;
+    width:1.5em;
+    overflow:hidden;
+    /* white-space:nowrap; */
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.rating > input:checked ~ label {
+    color: var(--BluGreen);    
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color:  #ffc700;
+}
